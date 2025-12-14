@@ -1,0 +1,19 @@
+query GetSecondPageCharacters {
+  characters(page: 2) {
+    # The 'info' field is crucial for navigation details
+    info {
+      count
+      pages
+      next
+      prev
+    }
+    # The 'results' field contains the actual list of characters
+    results {
+      id
+      name
+      status
+      image
+    }
+  }
+}
+
